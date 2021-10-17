@@ -1,0 +1,68 @@
+﻿@model BisnicityApp.Entites.Admin
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{ 
+  
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/assetsAdmin/css/bootstrap.css">
+    <link rel="stylesheet" href="~/assetsAdmin/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/assetsAdmin/css/app.css">
+    <link rel="stylesheet" href="~/assetsAdmin/css/pages/auth.css">
+    <link rel="stylesheet" href="~/assetsAdmin/css/style.css">
+</head>
+<link rel="stylesheet" href="~/assetsAdmin/css/style.css">
+
+<body>
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="~/assetsAdmin/images/logo/logo-businicity.png" class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <form asp-action="Index" asp-controller="AdminB" enctype="multipart/form-data" method="post">
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0">Admin</p>
+                        </div>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" asp-for="@Model.UsernameAdmin" class="form-control form-control-lg"
+                                   placeholder="UserName" />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <input type="password"  asp-for="@Model.Password"  class="form-control form-control-lg"
+                                   placeholder="Password" />
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg"
+                                    style="padding-left: 2.5rem; padding-right: 2.5rem;background-color: #14858d !important;">
+                                Login
+                            </button>
+                        </div>
+
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <!-- Copyright -->
+        <!-- Right -->
+        
+        <!-- Right -->
+        
+    </section>
+    </body>
+
+

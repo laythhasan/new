@@ -1,0 +1,192 @@
+﻿@using Bisnicity.Models
+
+@model IEnumerable<ShowCompanyViewmodel>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;0,600;1,500&family=Fjalla+One&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cabin:ital,wght@0,500;0,600;1,500&family=Fjalla+One&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap"
+          rel="stylesheet">
+    <title>حلول الأعمال </title>
+    <link rel="icon" href="~/assets/images/logo-businicity.png" type="image/x-icon">
+</head>
+
+<body style="font-family: 'Rubik', sans-serif;">
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow"
+         style="background-image: url(../assets/images/footer.png);">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href=@Url.Action("IndexAR","Home")>
+                <img src="~/assets/images/logowhite.png" alt=""
+                     width="100" height="auto">
+            </a>
+
+            <a class="navbar-brand text-white fs-2" href=@Url.Action("IndexAR","Home")>Businicity</a>
+            <button class="navbar-toggler collapsed bg-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-content">
+                <div class="hamburger-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content" style="margin-left: 50%;">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-6" aria-current="page" href=@Url.Action("IndexAR","Home") dir="rtl" lang="ar">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6" href=@Url.Action("AboutUsAR","Home") dir="rtl" lang="ar">من نحن </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6" href="#" dir="rtl" lang="ar"> حلول </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6" href=@Url.Action("BuntAR","Home") dir="rtl" lang="ar"> عالمي </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6" href=@Url.Action("BlogsAR","Home") dir="rtl" lang="ar">أخبار </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-6" href=@Url.Action("ContactUsAR","Home") dir="rtl" lang="ar">أتصل بنا </a>
+                    </li>
+
+                </ul>
+                <div class="d-flex ms-auto">
+
+                    <a class="text-white fs-5" style="text-decoration: none;" href=@Url.Action("Index1","Home")>|EN </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="ex-basic-1 pt-5 pb-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-fluid mt-5 mb-3" src="~/assets/images/it so 2.jpg" alt="alternative">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 fs-5" dir="rtl" lang="ar">
+                    <h1>خدمات الاعمال :</h1>
+                    <p class="py-2 para-light" dir="rtl" lang="ar">
+                        خدمات وحلول فريدة نقدمها للأعمال التجارية، المحال والشركات على اختلاف التخصصات، لنساهم معكم في تطوير أعمالكم وإعطائكم القيمة المضافة التي ترغبون بها.
+                    </p>
+                    <h1 class="mt-2">السوق :</h1>
+                    <p class="py-2 para-light" dir="rtl" lang="ar">
+                        ستتمكنون من خلال هذا القسم من انشاء متجركم الإلكتروني على منصتنا الرقمية الشاملة "مدينة الأعمال"، الذي بدوره سيربطكم مع زبائنكم ويقوم بإيصال منتجاتكم وخدماتكم المعروضة للباحثين عنها عبر شبكة الإنترنت من خلال أي من محركات البحث المعروفة للمستهلك.
+                       </p>
+                        <h1>تصميم المواقع الإلكترونية التعريفية / التجارية :</h1>
+                        <p class="py-2 para-light" dir="rtl" lang="ar">
+                            مجموعة من القوالب الخاصة ستتمكنون من خلالها من إنشاء موقعكم الإلكتروني، وإضافة لمساتكم تحت العنوان الذي يناسبكم URL ،مع مساحات تخزين وواجهة مستخدم سهلة تستطيعون من خلالها التعريف عن الخدمات / المنتجات التي توفرونها للمستهلك، وعرضها مع إمكانية بيعها عبر الموقع الإلكتروني بشكل رقمي بالكامل في حزمة التجارة الإلكترونية مع خيار تطوير هذه المواقع لتكون تجارية بالكامل مع مزايا إضافية ستتمتعون بها عند اشتراككم .
+                           </p>
+                            <h1 class="mt-2">خدمات التوظيف :</h1>
+                            <p class="py-2 para-light" dir="rtl" lang="ar">
+                                نقدم لكم من خلال هذا النافذة خدمات البحث عن الكفاءات واستقطاب المهارات من شتى التخصصات، من أصحاب الخبرات العملية، تبعًا لمتطلباتكم الدقيقة والتفصيلية للتوظيف، مع إمكانية تصفية النتائج بناًء على موقعكم وحجم شركتكم وتخصصكم وأي تفاصيل أخرى قد ترغبون بإضافتها .
+                               </p>
+                                <h1 class="mt-2">التدريب والتطوير المؤسسي :</h1>
+                                <p class="py-2 para-light" dir="rtl" lang="ar">
+                                    قوموا بالتسجيل لتدريب الموظفين وتطوير مهاراتهم بمواضيع الاختصاص بالتعاون مع معاهد تعليمية ومراكز تدريب مهني وكليات وجامعات معتمدة، تستطيعون من خلالها الحصول على شهادات موثقة من مصدرها، كما ونقدم خدمات التدريب العكسية حيث تتقدم الجامعة / المؤسسة التعليمية بدوراتها المجانية أو المدفعة للمستخدمين على الموقع .
+                                  </p>
+                                    <h1 class="mt-2">خدمات الأفراد :</h1>
+                                    <p class="py-2 para-light" dir="rtl" lang="ar">
+                                        في هذا القسم ستتطلعون على الباقات الخدمية الخاصة بالأفراد التي تشمل التدريب و التوظيف و البحث عن شواغر من خلال محرك البحث المصمم خصيصا لهذه الغايات .
+                                       </p>
+                                        <h1 class="mt-2">خدمات التوظيف : </h1>
+                                        <p class="py-2 para-light" dir="rtl" lang="ar">
+                                            تحتوي هذه الصفحة على فرص عمل مختلفة و شواغر قد تكونون انتم أفضل من يشغلها  زوروا منصة التوظيف الان و قوموا بتحميل سيرتكم الذاتية .
+                            </p>
+                                            <h1 class="mt-2">التدريب و التطوير الشخصي الأكاديمي و المهني :</h1>
+                                            <p class="py-2 para-light" dir="rtl" lang="ar">
+                                                في هذا القسم نقدم للراغبين بتطوير انفسهم و الانخراط بورشات تدريب مهنية او أكاديمية تنتهي بالحصول على شهادات معتمدة من جامعات و معاهد و مراكز تدريب مختصة خاصية البحث و التصفية بناء على عوامل عدة تشمل عنوان الورشة او الدورة أو الاختصاص و الاقرب اليك في الصيغة الوجاهية كما نحرص على دراسة مواضيع الدورات المتقدمة و ضرورة تطابق مخرجات التعلم مع متطلبات السوق الحالي .
+                                              </p>
+                                                <h1 class="mt-2">تأهيل الخرجين :</h1>
+                                                <p class="py-2 para-light" dir="rtl" lang="ar">
+                                                    القسم الخاص بالطلاب الخريجين و المقبلين على التخرج تم تطويره ليعمل على ربط الطلاب بالشركات و المنشأت المختلفة بغرض التدريب العملي  و طرح فرص  التوظيف لدى من يتيحها عبر المنصة للطلاب على مقاعد الدراسة بشكل جزئي او بعد التدريب .
+                                                  </p>
+                                                    <h1 class="mt-2"> خدمات الريادة للأفكار الأبداعية لداعمي الابداع في الأعمال : </h1>
+                                                    <p class="py-2 para-light" dir="rtl" lang="ar">
+                                                        ستجدون في هذا القسم مجموعة كبيرة من الأفكار الريادية الجديدة  و التي يبحث أصحابها عن ممولين و شركاء أعمال  في هذا القسم مجموعة كبيرة من الأفكار الريادية الجديدة والتي  يبحث أصحابها عن ممولين و شركاء أعمال للأنشاء او لتطوير أفكارهم و ترجمتها على أرض الواقع كما سيساعدكم محرك البحث الخاص بالموقع على تصفية النتائج بناء على عدة عوامل ابرزها الموقع و الميزانية المطلوبة و التخصص و حجم العمل وطبيعة العمل وسنة التأسيس للاعمال القائمة من ناحية استثمارية بالتشارك وللمبدعين ايضا خاصية البحث عن تمويل وعرض ما يتطلبه انشاء تطبيق فكرته او تطويرها اذا كانت قائمة بالاصل والتفاوض مع المهتمين بالأستثمار عبر منصتنا .
+                                                    </p>
+</div> <!-- end of col -->
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+
+
+    <footer class="bg-dark p-4 text-white text-center" style="background-image: url(../assets/images/footer.png);">
+        <div style="margin-bottom: 1%;">
+            <a dir="rtl" lang="ar" class="text-white" style="text-decoration: none; padding: 1%;" href=@Url.Action("IndexAR","Home")>
+                <i class="fas fa-home"></i>
+                الصفحة الرئيسية
+            </a>
+            <a dir="rtl" lang="ar" class="text-white" style="text-decoration: none; padding: 1%;" href=@Url.Action("AboutUsAR","Home")>
+                <i class="fab fa-angular"></i>
+                من نحن
+            </a>
+            <a dir="rtl" lang="ar" class="text-white" style="text-decoration: none; padding: 1%;" href=@Url.Action("ContactUsAR","Home")>
+                <i class="far fa-address-book"></i> أتصل بنا
+            </a>
+        </div>
+        <small>(c) 2021-2022 Written by BusinessCity</small>
+        <div class="icons">
+            <a href="#" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model BisnicityApp.Entites.ContactUs
+
+
+@{ Layout = "_LayoutAR";
+    var mess = TempData["message"] ?? string.Empty;
+
+}
+<link href="~/css/toastr.css" rel="stylesheet" />
+
+<section class="contact d-flex align-items-center py-5" id="contact">
+    <div class="container text-dark">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center" data-aos="fade-down">
+
+                <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Businicity _ مدينة الأعمال&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        frameborder="0" style="border:0; width: 100%; height: 100%;" allowfullscreen></iframe>
+
+            </div>
+            <div class="col-md-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
+                 data-aos="fade-right">
+                <div style="width:90%">
+                    <div class="text-center text-lg-start py-4 pt-lg-0">
+                        <h1> تواصل معنا  </h1>
+                        <h3 class="py-2" dir="rtl" lang="ar">ما الذي ترغب بالأستفسار عنه ؟ املأ الخانات  بأسمك و معلوماتك الشخصية ليتم التواصل معك في اقرب فرصة </h3>
+                    </div>
+                    <form asp-action="ContactUsAR" asp-controller="Home" enctype="multipart/form-data" method="post">
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group py-2">
+                                        <input type="text" class="form-control form-control-input"
+                                               asp-for="FirstName" dir="rtl" lang="ar" placeholder="الإسم">
+                                        <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group py-2">
+                                        <input type="tel" class="form-control form-control-input"
+                                               asp-for="PhoneNo" dir="rtl" lang="ar" placeholder="رقم هاتفك للتواصل ">
+                                        <span asp-validation-for="@Model.PhoneNo" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group py-1">
+                                <input type="email" class="form-control form-control-input"
+                                       asp-for="Email" dir="rtl" lang="ar" placeholder="البريد الألكتروني ">
+                                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group py-2">
+                                <textarea class="form-control form-control-input" asp-for="Messsage"
+                                          rows="6" dir="rtl" lang="ar" placeholder="كيف يمكننا مساعدتك ؟"></textarea>
+                                <span asp-validation-for="@Model.Messsage" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="my-3">
+                            <input class="btn text-white" type="submit" value="أرسل" style="background-color: #0c6e78;" href="#your-link" dir="rtl" lang="ar" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var ss = '@mess';
+        if (ss) {
+            toastr.success(ss);
+        }
+    })
+</script>
